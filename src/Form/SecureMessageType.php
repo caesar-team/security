@@ -24,7 +24,7 @@ class SecureMessageType extends AbstractType
                     new NotBlank(),
                 ],
             ])
-            ->add('secondsLimit', IntegerType::class, [
+            ->add('millisecondsLimit', IntegerType::class, [
                 'constraints' => [
                     new NotNull(),
                     new NotEqualTo(['value' => 0]),

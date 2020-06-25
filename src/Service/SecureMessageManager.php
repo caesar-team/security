@@ -36,9 +36,9 @@ class SecureMessageManager
         $this->client->set($clientId, $this->serialize($message));
         $this->client->set($limitId, $message->getRequestsLimit());
 
-        if (self::UNLIMITED_VALUE !== $message->getSecondsLimit()) {
-            $this->client->expire($clientId, $message->getSecondsLimit());
-            $this->client->expire($limitId, $message->getSecondsLimit());
+        if (self::UNLIMITED_VALUE !== $message->getMillisecondsLimit()) {
+            $this->client->expire($clientId, $message->getMillisecondsLimit());
+            $this->client->expire($limitId, $message->getMillisecondsLimit());
         }
 
         return $message;
@@ -93,7 +93,7 @@ class SecureMessageManager
 
         $message->setId($id);
         $message->setMessage($data);
-        $message->setSecondsLimit($ttl);
+        $message->setMillisecondsLimit($ttl);
         $message->setRequestsLimit($attemptsLeft);
 
         return $message;

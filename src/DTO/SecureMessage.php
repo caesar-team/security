@@ -24,7 +24,7 @@ class SecureMessage
      *
      * @Groups({"write"})
      */
-    private $secondsLimit;
+    private $millisecondsLimit;
 
     /**
      * @var int
@@ -66,13 +66,13 @@ class SecureMessage
         $this->requestsLimit = $requestsLimit;
     }
 
-    public function getSecondsLimit(): ?int
+    public function getMillisecondsLimit(): ?int
     {
-        return $this->secondsLimit;
+        return $this->millisecondsLimit;
     }
 
-    public function setSecondsLimit(int $secondsLimit): void
+    public function setMillisecondsLimit(int $millisecondsLimit): void
     {
-        $this->secondsLimit = $secondsLimit;
+        $this->millisecondsLimit = $millisecondsLimit;
     }
 }

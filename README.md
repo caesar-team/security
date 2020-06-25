@@ -36,7 +36,7 @@ POST /message with
 ```json
 {
   "message": "string",
-  "secondsLimit": 20,
+  "millisecondsLimit": 20,
   "requestsLimit": 20
 }
 ```

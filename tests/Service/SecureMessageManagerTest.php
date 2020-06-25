@@ -34,7 +34,7 @@ class SecureMessageManagerTest extends TestCase
         $message = new SecureMessage();
         $message->setMessage('test');
         $message->setRequestsLimit(1);
-        $message->setSecondsLimit(80000);
+        $message->setMillisecondsLimit(80000);
         $this->secureMessageManager->save($message);
 
         $this->assertInstanceOf(SecureMessage::class, $message);
