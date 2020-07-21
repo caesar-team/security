@@ -1,4 +1,4 @@
-<?
+<?php
 
 namespace Caesar\SecurityMessageBundle\DependencyInjection;
 
