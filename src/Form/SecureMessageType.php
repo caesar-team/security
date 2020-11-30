@@ -42,6 +42,7 @@ class SecureMessageType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => SecureMessage::class,
+            'csrf_protection' => false,
         ]);
     }
 }
